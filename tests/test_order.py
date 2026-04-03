@@ -1,17 +1,15 @@
-﻿import pytest
 import allure
+import pytest
 
 from pages.home_page import HomePage
 from pages.order_page import OrderPage
+from data import ORDER_CASES
 from utils import Utils
 
 
 @pytest.mark.parametrize(
     "entry_point, metro, date, rent_period, color",
-    [
-        ("top", "Сокольники", "15.04.2026", "сутки", "black"),
-        ("bottom", "Черкизовская", "16.04.2026", "двое суток", "grey"),
-    ],
+    ORDER_CASES,
 )
 @allure.feature("Заказ самоката")
 @allure.story("Позитивный сценарий")

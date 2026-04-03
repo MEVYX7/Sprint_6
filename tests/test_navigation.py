@@ -18,7 +18,7 @@ class TestNavigation:
             home_page.click_scooter_logo()
 
         with allure.step("Проверить URL главной"):
-            assert driver.current_url.startswith(Urls.BASE_URL)
+            assert home_page.get_current_url().startswith(Urls.BASE_URL)
 
     @allure.story("Логотип Яндекса")
     @allure.title("Переход на Дзен по клику на логотип Яндекса")
@@ -31,4 +31,4 @@ class TestNavigation:
             home_page.wait_url_contains("dzen.ru")
 
         with allure.step("Проверить URL Дзена"):
-            assert "dzen.ru" in driver.current_url
+            assert "dzen.ru" in home_page.get_current_url()

@@ -12,9 +12,11 @@ class OrderPageLocators:
     DATE = (By.XPATH, "//input[@placeholder='* Когда привезти самокат']")
     DATE_PICKER_POPUP = (By.CLASS_NAME, "react-datepicker")
     RENT_PERIOD = (By.CLASS_NAME, "Dropdown-control")
+    RENT_PERIOD_PLACEHOLDER = (By.XPATH, "//div[contains(@class,'Dropdown-placeholder')]")
+    RENT_PERIOD_OPTIONS = (By.XPATH, "//div[contains(@class,'Dropdown-option')]")
     COMMENT = (By.XPATH, "//input[@placeholder='Комментарий для курьера']")
 
-    CREATE_ORDER_BUTTON = (By.XPATH, "(//button[text()='Заказать'])[2]")
+    CREATE_ORDER_BUTTON = (By.XPATH, "//div[contains(@class,'Order_Buttons')]//button[text()='Заказать']")
     CONFIRM_ORDER_BUTTON = (By.XPATH, "//button[text()='Да']")
 
     SUCCESS_POPUP = (By.CLASS_NAME, "Order_ModalHeader__3FDaJ")

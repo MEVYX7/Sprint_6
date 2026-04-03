@@ -2,8 +2,8 @@
 
 
 class HomePageLocators:
-    TOP_ORDER_BUTTON = (By.XPATH, "(//button[text()='Заказать'])[1]")
-    BOTTOM_ORDER_BUTTON = (By.XPATH, "(//button[text()='Заказать'])[2]")
+    TOP_ORDER_BUTTON = (By.XPATH, "//div[contains(@class,'Header_Nav')]//button[text()='Заказать']")
+    BOTTOM_ORDER_BUTTON = (By.XPATH, "//div[contains(@class,'Home_FinishButton')]//button[text()='Заказать']")
 
     FAQ_BLOCK = (By.CLASS_NAME, "Home_FourPart__1uthg")
     FAQ_QUESTION = (By.ID, "accordion__heading-{}")
